@@ -1,9 +1,9 @@
 import './App.css'
 import Home from './pages/home/Home.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import APOD from './pages/APOD/APOD.tsx';
 
 
-const APOD = () => <h2>Photo of the Day Page</h2>;
 const MarsRover = () => <h2>Mars Rover Page</h2>;
 
 function App() {

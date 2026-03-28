@@ -1,6 +1,6 @@
 :root {
     --background: rgb(251, 254, 255);
-    --color1: rgb(4, 13, 11);
+    --color1: rgb(5, 5, 5);
     --color2: #022F56;
     --color3: #488DB4;
     --color4: #85C4E4;
@@ -67,14 +67,19 @@ body {
     
 }
 
-.home-text {
-    font-size: 3em;
+.title-text {
+    font-size: 6em;
+    letter-spacing: 0.1em;
+    color: var(--color6);
+    margin: 0.5em;
 }
 
 .underbar {
-
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1em;
 }
 
-.underbar span {
-
+.underbar span span {
+    color: white;
 }

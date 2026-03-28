@@ -20,7 +20,7 @@ const Home = () => {
                 <div>
                 <h1 className='title-text'>Space Station</h1>
                     <div className='underbar'>
-                        <span>Your one stop shop for NASA news</span>
+                        <span>Your one stop for <span>NASA News</span></span>
                         <div>
                     </div>
                 </div>

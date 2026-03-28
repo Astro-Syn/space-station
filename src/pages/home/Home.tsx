@@ -10,27 +10,26 @@ const Home = () => {
                 <Link to='/'>Home</Link>
                 <Link to="/apod">Photo Of the Day</Link>
                 <Link to="marsRover">Mars Rover</Link>
-                <Link to="nasaimgs">
-                NASA Images and Video
-                </Link>
+                <Link to="nasaimgs">NASA Images and Video</Link>
             </div>
 
             <div className='home-wrapper'>
-                {location.pathname === '/' && 
-                <div className='home-text-container'>
-                <h1 className='title-text'>Space Station</h1>
-                <span>[Site made by Kelsey]</span>
-                    <div className='underbar'>
-                        <span>Your one stop for <span>NASA News</span></span>
-                        <div>
-                    </div>
-                </div>
-            </div>
-                
-                }
                 
 
-               
+                {location.pathname === '/' && 
+                    <div className='home-text-container'>
+                        <h1 className='title-text'>Space Station</h1>
+                        <span>[Site made by Kelsey]</span>
+                        <img src='/Images/svg1.svg' className='svg1'/>
+
+                        <div className='underbar'>
+                            <span>
+                                Your one stop for <span>NASA News</span>
+                            </span>
+                        </div>
+                    </div>
+                }
+
                 <Outlet />
             </div>
         </div>

@@ -17,8 +17,9 @@ const Home = () => {
 
             <div className='home-wrapper'>
                 {location.pathname === '/' && 
-                <div>
+                <div className='home-text-container'>
                 <h1 className='title-text'>Space Station</h1>
+                <span>[Site made by Kelsey]</span>
                     <div className='underbar'>
                         <span>Your one stop for <span>NASA News</span></span>
                         <div>

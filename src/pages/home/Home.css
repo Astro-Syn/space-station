@@ -67,17 +67,29 @@ body {
     
 }
 
+.home-text-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
 .title-text {
-    font-size: 6em;
+    font-size: 10em;
     letter-spacing: 0.1em;
     color: var(--color6);
-    margin: 0.5em;
+    
 }
 
 .underbar {
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid rgba(255, 255, 255, 0.692);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.692);
+    margin-bottom: 1em;
     padding: 1em;
+    width: 100vw;
+    display: flex;
 }
 
 .underbar span span {

@@ -1,21 +1,26 @@
 :root {
     --background: rgb(251, 254, 255);
-    --color1: rgb(0, 20, 49);
+    --color1: rgb(4, 13, 11);
     --color2: #022F56;
     --color3: #488DB4;
     --color4: #85C4E4;
     --color5: #CCDEE4;
     --color6: #ecf6f9;
+    --color7: #294933;
+    --color8: #446B5C;
+    --color9: #81EC86;
 }
+
+
 
 body {
       background: 
-        linear-gradient(rgba(239, 255, 254, 0.5), rgba(146, 213, 255, 0.5)),
-        url('Images/cyber1.jpg');
+        linear-gradient(rgba(239, 255, 254, 0.085), rgba(153, 255, 146, 0.063)),
+        url('Images/cyber2.jpg');
     background-size: cover;
     padding: 0;
     margin: auto;
-    font-family: monospace;
+    font-family: "Oxanium", monospace;
 }
 
 .home-container {
@@ -27,26 +32,49 @@ body {
 }
 
 .home-wrapper {
-    width: 90vw;
-    height: 50vh;
-    border: 2px solid var(--color1);
+    position: relative;
+    min-width: 90vw;
+    max-width: 90vw;
+    min-height: 80vh;
+    max-height: 80vh;
+    border: 2px solid var(--color9);
     border-radius: 1em;
-    background: var(--color6);
+    background: var(--color1);
+    overflow: hidden;
 }
 
 .links-container {
+    position: absolute;
+    top: 4.2em;
+    right: 2.1em;
+    transform: translateY(-100%);
     display: flex;
     flex-direction: row;
-    background: var(--color6);
+    background: var(--color1);
     gap: 2em;
-    border: 1px solid var(--color1);
+    border-top: 2px solid var(--color9);
+    border-left: 2px solid var(--color9);
+    border-right: 2px solid var(--color9);
     border-radius: 0.4em;
     padding: 0.5em;
     align-self: flex-end;
     margin-right: 2em;
+    z-index: 2;
 }
 
 .links-container a {
     text-decoration: none;
     
+}
+
+.home-text {
+    font-size: 3em;
+}
+
+.underbar {
+
+}
+
+.underbar span {
+
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import './APOD.css';
 
 interface APODData {
     title: string;
@@ -10,6 +10,7 @@ interface APODData {
 }
 
 const APOD = () => {
+    const API_KEY = import.meta.env.VITE_NASA_API_KEY;
     const [data, setData] = useState<APODData | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -18,7 +19,7 @@ const APOD = () => {
         const fetchAPOD = async () => {
             try {
                 const res = await fetch(
-                    'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
+                    `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
                 );
 
                 if (!res.ok) {
@@ -42,27 +43,34 @@ const APOD = () => {
     if (!data) return null;
 
     return (
-        <div>
+        <div className='APOD-container'>
+            <div className='date-time'>
             <h2>{data.title}</h2>
             <p>{data.date}</p>
-
+            </div>
+            
+            <div className='img-info-container'>
             {data.media_type === 'image' ? (
+                <div className='APOD-img-container'>
                 <img
+                    className='APOD-img'
                     src={data.url}
                     alt={data.title}
-                    style={{ width: '100%' }}
+                    
                 />
+                </div>
             ) : (
                 <iframe
                     src={data.url}
                     title={data.title}
-                    width="100%"
-                    height="400px"
+                    
                     allowFullScreen
                 />
             )}
-
+            <div>
             <p>{data.explanation}</p>
+            </div>
+        </div>
         </div>
     );
 };

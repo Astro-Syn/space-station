@@ -1,0 +1,55 @@
+.APOD-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    overflow:scroll;
+    height: 50vh;
+    margin: 0.2em;
+    border-radius: 1em;
+}
+
+.APOD-img-container {
+    position: relative;  
+    perspective: 500px;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img-info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+.APOD-img {
+    max-width: 40vw;
+    max-height: 40vh;
+    border-radius: 0.4em;
+    opacity: 0;
+    border: 2px solid var(--color4);
+     transform: scale(0.8) rotateX(-45deg) translateY(50px);
+    transition: all 1s ease;
+}
+
+.APOD-img {
+    animation: flyIn 1s ease forwards;
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotateX(-60deg) translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg) translateY(0);
+    }
+}
+
+
+

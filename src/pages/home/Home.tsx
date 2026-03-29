@@ -26,9 +26,9 @@ const Home = () => {
                     <div className='home-text-container'>
                         <div className='title-wrapper'>
                         <h1 className='title-text'>Space Station</h1>
-                      
+                      <img src='/Images/xsvg.svg' className='xsvg'/>
                         </div>
-                        <img src='/Images/svg1.svg' className='svg1'/>
+                        
 
                         <div className='underbar'>
                             <div className='ticker'>

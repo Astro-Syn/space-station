@@ -9,8 +9,12 @@ const Home = () => {
 
 
             <div className='home-wrapper'>
-                
+                <div className='galaxy-wrapper'>
+                        <img src='/Images/galaxy-top-layer.png' className='galaxy-links'/>
+                </div>
+                   
                 <div className='links-container'>
+                 
                     <div className='links'>
                            <Link to='/'>Home</Link>
                 <Link to="/apod">Photo Of the Day</Link>
@@ -21,23 +25,25 @@ const Home = () => {
             </div>
                 <img src='/Images/svg2.svg' className='svg2'/>
                 
+                <div className='satellite-img-glitch'>
 
+                     <img src='/Images/floating-satellite.png' className='satellite-img'/>
+                     <div className='glitch-layers'>
+                        <div className='glitch-layer'></div>
+                        <div className='glitch-layer'></div>
+                        <div className='glitch-layer'></div>
+                     </div>
+                </div>
+               
                 {location.pathname === '/' && 
                     <div className='home-text-container'>
                         <div className='title-wrapper'>
                         <h1 className='title-text'>Space Station</h1>
-                      <img src='/Images/xsvg.svg' className='xsvg'/>
+                     
                         </div>
                         
 
-                        <div className='underbar'>
-                            <div className='ticker'>
-                                <span>NASA News</span>
-                                <span>Images</span>
-                                <span>Facts</span>
-                                <span>Asteroids</span>
-                            </div>
-                        </div>
+                       
                     </div>
                 }
 

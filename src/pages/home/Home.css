@@ -233,9 +233,12 @@ body {
 .desc-section p {
     margin: 0;
     width: 90%;
+    border-right: 1px solid white;
 }
 
 .desc-section {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     padding: 0.6em;
 }

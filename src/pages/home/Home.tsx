@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import './Home.css';
+import { RiAliensLine } from "react-icons/ri";
 
 const Home = () => {
     const location = useLocation();
@@ -24,10 +25,7 @@ const Home = () => {
                         
 
                         
-                      
-
-                        
-                        
+  
 
                         
                         <div className='home-text-container'>
@@ -60,9 +58,15 @@ const Home = () => {
                             </div>
                             <div className='desc-section'>
                                 <p>This website, developed by Kelsey, leverages the power of NASA’s public APIs to deliver an engaging and educational exploration of space. It offers a curated collection of pages featuring astronomical imagery, planetary data, and insights into ongoing space missions. Visitors can navigate through a variety of interactive and visually compelling content designed to inspire curiosity about the universe. Whether you are interested in daily cosmic phenomena, detailed views from Mars rovers, or the broader wonders of our solar system and beyond, this platform provides an accessible and immersive experience. Embark on a journey through space and discover the remarkable science and beauty that define our galaxy.</p>
+                                <div>
+                                    <RiAliensLine />
+                                </div>
+                               
                             </div>
+                           
                             
                          </div>
+                      
                     </>
                 )}
 

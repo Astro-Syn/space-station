@@ -44,33 +44,40 @@ const APOD = () => {
 
     return (
         <div className='APOD-container'>
-            <div className='date-time'>
-            <h2>{data.title}</h2>
-            <p>{data.date}</p>
-            </div>
             
-            <div className='img-info-container'>
-            {data.media_type === 'image' ? (
-                <div className='APOD-img-container'>
-                <img
-                    className='APOD-img'
-                    src={data.url}
-                    alt={data.title}
-                    
-                />
+
+            <div className='content-container'>
+                <div className='media-container'>
+                    {data.media_type === 'image' ? (
+                        <img
+                            className='APOD-img'
+                            src={data.url}
+                            alt={data.title}
+                        />
+                    ) : (
+                        <iframe
+                            className='APOD-video'
+                            src={data.url}
+                            title={data.title}
+                            allowFullScreen
+                        />
+                    )}
                 </div>
-            ) : (
-                <iframe
-                    src={data.url}
-                    title={data.title}
-                    
-                    allowFullScreen
-                />
-            )}
-            <div>
-            <p>{data.explanation}</p>
+
+                <div className='info-container'>
+                    <div className='date-time'>
+                <h2>{data.title}</h2>
+                <p>[{data.date}]</p>
             </div>
-        </div>
+            <div className='img-container2'>
+                    <img src='/Images/cyber1.jpg'/>
+            </div>
+                    <div className='explain-container'>
+                    <p>{data.explanation}</p>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     );
 };

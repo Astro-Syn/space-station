@@ -12,11 +12,9 @@
 }
 
 
-
 body {
       background: 
-        linear-gradient(rgba(0, 0, 0, 0.967), rgba(0, 0, 0, 0.063)),
-        url('Images/cyber2.jpg');
+       black;
     background-size: cover;
     padding: 0;
     margin: auto;
@@ -39,7 +37,7 @@ body {
     justify-content: space-between;
     
     width: 95vw;
-    height: 85vh;
+    height: 90vh;
     
     border: 2px solid var(--color9);
     border-radius: 1em;
@@ -60,6 +58,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0.3;
     
 }
 
@@ -71,7 +70,7 @@ body {
     flex-direction: row;
     justify-content: center;
     background: var(--color1);
-    gap: 2em;
+    gap: 3em;
     width: 100vw;
     border-top: 2px solid var(--color9);
     border-left: 2px solid var(--color9);
@@ -84,8 +83,14 @@ body {
 
 .links-container a {
     text-decoration: none;
-    font-size: 1.5em;
-    
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    transition: 0.3s ease-in;
+}
+
+.links-container a:hover {
+    color: white;
 }
 
 .links {
@@ -116,23 +121,37 @@ body {
 .title-text {
     font-size: clamp(3rem, 12cqi, 14rem);
     color: var(--color6);
-    text-shadow: 5px 5px 15px  blue;
+    text-shadow: 5px 1px 2px  var(--color9);
+    animation: riseUp 1s ease-out forwards;
+    font-weight: 400;
     
 }
 
+@keyframes riseUp {
+    from {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 .satellite-img-glitch {
     position: relative;
-    z-index: 1;
-    overflow: hidden;
+    z-index: 1;    
+    animation: satelliteRise 2s forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
 }
 
 
 .satellite-img {
     width: 20vw;
     height: auto;
-    z-index: 1;
-    opacity: 0.4;
-    
+    z-index: 1;   
 }
 
 .glitch-layers {
@@ -155,17 +174,32 @@ body {
 	background-position: 0 0;
 }
 
+@keyframes satelliteRise {
+    from {
+        transform: translateY(150px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+}
+
 .glitch-layer:nth-child(1) {
 	transform: translateX(-5%);
 	animation: glitch-anim-1 2s infinite linear alternate;
+    
 }
 .glitch-layer:nth-child(2) {
 	transform: translateX(3%) translateY(3%);
 	animation: glitch-anim-2 2.3s -.8s infinite linear alternate;
+   
 }
 .glitch-layer:nth-child(3) {
 	transform: translateX(5%);
 	animation: glitch-anim-flash 1s infinite linear;
+    
 }
 @keyframes glitch-anim-1 {
 	0% {
@@ -252,7 +286,7 @@ body {
     align-self: center;
     width: 110vw;
     filter: invert(1) brightness(2);
-    opacity: 0.4;
+    opacity: 0.2;
         
 }
 

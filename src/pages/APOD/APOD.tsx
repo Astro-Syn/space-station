@@ -66,12 +66,14 @@ const APOD = () => {
 
                 <div className='info-container'>
                     <div className='date-time'>
+                        <div className='img-container2'>
+                    <img src='/Images/grid.png'/>
+            </div>
                 <h2>{data.title}</h2>
                 <p>[{data.date}]</p>
+                
             </div>
-            <div className='img-container2'>
-                    <img src='/Images/cyber1.jpg'/>
-            </div>
+            
                     <div className='explain-container'>
                     <p>{data.explanation}</p>
                     </div>

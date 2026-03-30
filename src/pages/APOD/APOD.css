@@ -1,3 +1,16 @@
+:root {
+    --background: rgb(251, 254, 255);
+    --color1: rgb(5, 5, 5);
+    --color2: #022F56;
+    --color3: #488DB4;
+    --color4: #85C4E4;
+    --color5: #CCDEE4;
+    --color6: #ecf6f9;
+    --color7: #294933;
+    --color8: #446B5C;
+    --color9: #81EC86;
+}
+
 .APOD-container {
     display: flex;
     flex-direction: column;
@@ -6,25 +19,17 @@
     gap: 1em;
     border-radius: 1em;
     overflow: hidden;
-    
-}
-
-.date-time {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .content-container {
     display: flex;
     flex-direction: row;
     flex: 1;
-    margin-top: 2em;
     gap: 1em;
 }
 
 .media-container {
+    position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -32,57 +37,6 @@
     border-radius: 1em;
     overflow: hidden;
     perspective: 500px;
-}
-
-.media-container img {
-    max-width: 500px;
-    height: auto;
-}
-
-.info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    flex: 1;
-    height: 100%;
-    border-radius: 1em;
-    padding: 1em;
-    overflow-y: auto;
-    position: relative;
-}
-
-
-.img-container2 {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.date-time p {
-    letter-spacing: 0.3em;
-
-}
-
-.explain-container {
-overflow-y: scroll;
-height: 20%;
-font-size: small;
-    
-}
-
-.date-time h2 {
-    color: white;
-    font-size: 3em;
-    position: absolute;
-    top: 2.5em;
-    font-weight: 100;
-}
-
-.info-container img {
-    max-width: 200px;
-    
 }
 
 .APOD-img {
@@ -99,6 +53,71 @@ font-size: small;
     height: 100%;
     border: none;
     border-radius: 0.4em;
+}
+
+.info-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.img-container2 {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+}
+
+.img-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.date-time {
+    position:relative;
+    height: 50vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-end;
+    border-bottom: 1px solid white;
+}
+
+.date-time h2 {
+    position: absolute;
+    z-index: 2;
+    line-height: 0.9;
+    margin-bottom: 0.3em;
+    font-size: 2.5em;
+    font-weight: 200;
+    color: white;
+    text-shadow: 5px 5px 20px black;
+}
+
+.date-time p {
+    margin: 0;
+    font-size: 0.9em;
+    letter-spacing: 0.3em;
+    color: var(--color9);
+}
+
+.date-time img {
+    position: absolute;
+    bottom: 1px;
+    top:0;
+}
+
+.explain-container {
+    flex: 1;
+    padding: 1em;
+    overflow-y: auto;
+    font-size: 0.9em;
 }
 
 @keyframes flyIn {

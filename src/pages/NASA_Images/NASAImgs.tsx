@@ -59,9 +59,14 @@ const NASAImgs = () => {
 
     return (
         <div className="nasa-imgs-container">
-            <h2>NASA Media Library</h2>
-
             
+            <div className='title-and-search'>
+                
+                  <div className='nasa-imgs title'>
+                    <h2>NASA Media Library</h2>
+                <img src='/Images/grid.png' className='grid-bg'/>
+                
+            </div>
             <div className="search-bar">
                 <input
                     type="text"
@@ -72,8 +77,15 @@ const NASAImgs = () => {
                 <button className='search-btn' onClick={() => fetchImages(query)}>Search</button>
             </div>
 
+            </div>
+          
             
-            {loading && <p>Loading...</p>}
+
+            
+            
+
+            
+            {loading && <p className='loading-txt'>[Loading...]</p>}
             {error && <p>{error}</p>}
 
             

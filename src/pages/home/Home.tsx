@@ -52,7 +52,7 @@ const Home = () => {
                                     <p>Web Dev</p>
                                     <p>Kelsey Balajti</p>
                                 </div>
-                                <span>
+                                <span className='github-sec'>
                                     <p>Github</p>
                                 <img src='/Images/githublogo.svg' className='gitlogo'/>
                                 </span>

@@ -62,9 +62,12 @@ const NASAImgs = () => {
             
             <div className='title-and-search'>
                 
-                  <div className='nasa-imgs title'>
+                  <div className='nasa-imgs-title'>
                     <h2>NASA Media Library</h2>
-                <img src='/Images/grid.png' className='grid-bg'/>
+                    <div className='grid-wrapper'>
+                        <img src='/Images/grid.png' className='grid-bg'/>
+                    </div>
+                
                 
             </div>
             <div className="search-bar">

@@ -22,28 +22,12 @@ const Home = () => {
                 {location.pathname === '/' && (
                     <>
                         
-                        <div className='galaxy-wrapper'>
-                            <img
-                                src='/Images/galaxy-top-layer.png'
-                                className='galaxy-links'
-                            />
-                        </div>
 
                         
-                       
+                      
 
                         
-                        <div className='satellite-img-glitch'>
-                            <img
-                                src='/Images/floating-satellite.png'
-                                className='satellite-img'
-                            />
-                            <div className='glitch-layers'>
-                                <div className='glitch-layer'></div>
-                                <div className='glitch-layer'></div>
-                                <div className='glitch-layer'></div>
-                            </div>
-                        </div>
+                        
 
                         
                         <div className='home-text-container'>
@@ -51,8 +35,30 @@ const Home = () => {
                                 <h1 className='title-text'>
                                     Space Station
                                 </h1>
+                                <span className='title2-txt'>
+                                    <p>NASA API</p>
+                                </span>
                             </div>
                         </div>
+                         <img src='/Images/space-texture.jpg' className='space-texture'/>
+
+                         <div className='bottom-chaos'>
+                            <div className='barcode-home'>
+                                <img src='/Images/barcode.png'/>
+                            </div>
+
+                            <div className='credits'>
+                                <div className='webdev'>
+                                    <p>Web Dev</p>
+                                    <p>Kelsey Balajti</p>
+                                </div>
+                                <span>
+                                    <p>Github</p>
+                                <img src='/Images/githublogo.svg' className='gitlogo'/>
+                                </span>
+                            </div>
+                            
+                         </div>
                     </>
                 )}
 

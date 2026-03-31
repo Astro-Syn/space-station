@@ -1,0 +1,59 @@
+.donki-container {
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    background: red;
+    padding: 1em;
+    margin: 1em;
+}
+
+.donki-left-side {
+    flex: 1;
+    background: blue;
+    height: 100%;
+}
+
+.donki-right-side {
+    flex: 2;
+    background: lightblue;
+    height: 100%;
+}
+
+
+.donki-links-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    gap: 1em;
+    border-radius: 0.3em;
+    background-image: url('/Images/grid.png');
+    background-size: cover;
+    
+}
+
+.donki-links-container a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.donki-links-container a:active{
+    font-weight: bold;
+    
+}
+
+.left-side-deco {
+    background: magenta;
+    height: 15vh;
+    
+}
+
+.left-side-deco img {
+    width: 70%;
+    height: 100%;
+    filter: invert(2) brightness(2)
+    
+}

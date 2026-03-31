@@ -8,6 +8,12 @@ import DONKI from './pages/DONKI/DONKI.tsx';
 import CoronalMassEjection from './pages/DONKI/CME/CoronalMassEjection.tsx';
 import GeomagneticStorm from './pages/DONKI/GST/GeomagneticStorm.tsx';
 import HighSpeedStream from './pages/DONKI/HSS/HighSpeedStream.tsx';
+import SolarFlare from './pages/DONKI/FLR/SolarFlare.tsx';
+import MagnetopauseCrossing from './pages/DONKI/MPC/MagnetopauseCrossing.tsx';
+import RadiationBeltEnhancement from './pages/DONKI/RBE/RadiationBeltEnhancement.tsx';
+import Notifications from './pages/DONKI/notifications/Notifications.tsx';
+import WASEnilSimulation from './pages/DONKI/WSA+ES/WSAEnilSimulation.tsx';
+import SolarEnergeticParticle from './pages/DONKI/SEP/SolarEnergeticParticle.tsx';
 
 
 function App() {
@@ -23,17 +29,15 @@ function App() {
                     <Route path='donki' element={<DONKI/>}>
 
                     <Route path='cme' element={<CoronalMassEjection/>}/>
-                    <Route path='flr'/>
                     <Route path='gst' element={<GeomagneticStorm/>}/>
                     <Route path='hss' element={<HighSpeedStream/>}/>
-                    <Route path='mpc'/>
-                    <Route path='notifications'/>
-                    <Route path='rbe'/>
-                    <Route path='sep'/>
-                    <Route path='wsaes'/>
-                    <Route/>
-                    <Route/>
-                    <Route/> 
+                  <Route path='flr' element={<SolarFlare />} />
+<Route path='mpc' element={<MagnetopauseCrossing />} />
+<Route path='notifications' element={<Notifications />} />
+<Route path='rbe' element={<RadiationBeltEnhancement />} />
+<Route path='sep' element={<SolarEnergeticParticle />} />
+<Route path='wsaes' element={<WASEnilSimulation />} />
+                    
                     
                     
                     </Route>

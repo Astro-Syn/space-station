@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_KEY = "DEMO_KEY";
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
 const HighSpeedStream: React.FC = () => {
   const [data, setData] = useState<any[]>([]);

@@ -28,6 +28,7 @@
     flex-direction: column;
     border: 1px solid white;
     gap: 1em;
+    max-width: 90%;
     border-radius: 0.3em;
     background-image: url('/Images/grid.png');
     background-size: cover;
@@ -37,6 +38,8 @@
 .donki-links-container a {
     text-decoration: none;
     color: white;
+    font-size: clamp(0.8rem, 1.5vw, 1.2em);
+    text-shadow: 5px 5px 5px black;
     
 }
 

@@ -22,7 +22,7 @@ interface WeatherResponse {
   [key: string]: any;
 }
 
-const API_KEY = "DEMO_KEY"; // Replace with your NASA API key
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
 const MarsWeather: React.FC = () => {
   const [weather, setWeather] = useState<SolData | null>(null);

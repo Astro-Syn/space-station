@@ -58,6 +58,8 @@ const NASAImgs = () => {
         fetchImages(query);
     }, []);
 
+
+    
     return (
         <div className="nasa-imgs-container">
             

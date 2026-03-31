@@ -14,8 +14,9 @@ const Home = () => {
                     <div className='links'>
                         <Link to='/'>Home</Link>
                         <Link to="/apod">Photo Of the Day</Link>
-                        <Link to="marsRover">Mars Rover</Link>
+                        <Link to="marsWeather">Mars Weather</Link>
                         <Link to="nasaimgs">NASA Images and Video</Link>
+                        <Link to='donki'>DONKI</Link>
                     </div>
                 </div>
 

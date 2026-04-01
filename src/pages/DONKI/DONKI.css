@@ -15,7 +15,7 @@ h2 {
 
 .donki-left-side {
     flex: 1;
-    height: 100%;
+    height: 80%;
     min-width: 30%;
     max-width: 30%;
 }
@@ -24,7 +24,6 @@ h2 {
     flex: 2; 
     height: 80%;
     padding: 1em;
-  background: rgba(128, 128, 128, 0.171);
   border-radius: 0.3em;
   display: flex;
   flex-direction: column;
@@ -40,20 +39,20 @@ h2 {
     height: 50vh;
     border: 2px solid white;
    
-     animation: slideInWindow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+     animation: slideInWindow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes slideInWindow {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-100%) scale(0.4);
         opacity: 0;
     }
     60% {
-        transform: translateX(10px);
+        transform: translateX(10px) scale(0.5);
         opacity: 1;
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
     }
 }
 
@@ -71,7 +70,6 @@ h2 {
     height: 95%;
     margin-top: 2em;
 
-    
 }
 
 .donki-rs-wrapper::before {
@@ -134,6 +132,11 @@ h2 {
     color: white;
     font-size: clamp(0.8rem, 1.5vw, 1.2em);
     text-shadow: 5px 25px 50px black;
+    transition: 0.2s ease-in;
+}
+
+.donki-links-container a:hover {
+    color: rgba(255, 255, 255, 0.747);
 }
 
 .donki-links-container a:active{

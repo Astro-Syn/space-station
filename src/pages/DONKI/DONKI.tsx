@@ -8,7 +8,7 @@ const DONKI = () => {
 
             {/*Left Side */}
             <div className='donki-left-side'>
-                <div>
+                <div className='donki-text'>
                      <h2>DONKI PAGE</h2>
                      <p>[ Database Of Notifications, Knowledge, Information ]</p>
                 </div>

@@ -13,14 +13,21 @@ const CoronalMassEjection: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Coronal Mass Ejections</h2>
+    <div className="donki-rs-wrapper">
+      <div className='donki-title2-container'>
+          <h2>Coronal Mass Ejections</h2>
+      </div>
+      
+      <div className='donki-rs-content'>
+
+      
       {data.slice(0, 5).map((item, i) => (
         <div key={i}>
           <p>Date: {item.startTime}</p>
           <p>Source: {item.sourceLocation}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 };

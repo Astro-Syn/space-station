@@ -11,14 +11,20 @@ const SolarEnergeticParticle = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Solar Energetic Particles</h2>
+        <div className='donki-rs-wrapper'>
+            
+            <div className='donki-title2-container'>
+                <h2>Solar Energetic Particles</h2>
+            </div>
+            
+            <div className='donki-rs-content'>
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>ID:</strong> {item.sepID}</p>
                     <p><strong>Start:</strong> {item.eventTime}</p>
                 </div>
             ))}
+        </div>
         </div>
     );
 };

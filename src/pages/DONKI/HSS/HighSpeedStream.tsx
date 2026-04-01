@@ -13,13 +13,19 @@ const HighSpeedStream: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h2>High Speed Streams</h2>
+    <div className='donki-rs-wrapper'>
+      <div className="donki-title2-container">
+          <h2>High Speed Streams</h2>
+      </div>
+    
+    <div className='donki-rs-content'>
       {data.slice(0, 5).map((hss, i) => (
-        <div key={i}>
+        <div key={i} className="donki-rs-text">
           <p>Event Time: {hss.eventTime}</p>
         </div>
       ))}
+    </div>
+      
     </div>
   );
 };

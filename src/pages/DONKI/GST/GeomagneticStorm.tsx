@@ -14,7 +14,10 @@ const GeomagneticStorm: React.FC = () => {
 
   return (
     <div>
-      <h2>Geomagnetic Storms</h2>
+      <div className='donki-title2-container'>
+        <h2>Geomagnetic Storms</h2>
+      </div>
+      
       {data.slice(0, 5).map((storm, i) => (
         <div key={i}>
           <p>Start: {storm.startTime}</p>

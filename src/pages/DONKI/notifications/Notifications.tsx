@@ -12,7 +12,10 @@ const Notifications = () => {
 
     return (
         <div>
-            <h2>Notifications</h2>
+            <div className='donki-title2-container'>
+                     <h2>Notifications</h2>
+            </div>
+           
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>Message:</strong> {item.messageBody}</p>

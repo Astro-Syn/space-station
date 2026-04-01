@@ -39,7 +39,7 @@ h2 {
     width: 40vw;
     height: 50vh;
     border: 2px solid white;
-    overflow: hidden;
+   
      animation: slideInWindow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -62,6 +62,16 @@ h2 {
     position: relative;
     z-index: 1;
     color: white;
+}
+
+.donki-rs-content {
+    padding-left: 0.5em;
+    position: absolute;
+    overflow-y: auto;
+    height: 95%;
+    margin-top: 2em;
+
+    
 }
 
 .donki-rs-wrapper::before {
@@ -105,7 +115,6 @@ h2 {
     margin: 0;
     padding-bottom: 1em;
 }
-
 
 
 .donki-links-container {

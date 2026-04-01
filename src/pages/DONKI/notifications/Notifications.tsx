@@ -11,11 +11,15 @@ const Notifications = () => {
     }, []);
 
     return (
-        <div>
+        <div className='donki-rs-wrapper'>
             <div className='donki-title2-container'>
                      <h2>Notifications</h2>
             </div>
            
+
+           <div className='donki-rs-content'>
+
+          
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>Message:</strong> {item.messageBody}</p>
@@ -23,6 +27,7 @@ const Notifications = () => {
                 </div>
             ))}
         </div>
+         </div>
     );
 };
 

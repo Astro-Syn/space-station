@@ -18,7 +18,7 @@ const DONKI = () => {
                 <Link to="gst">Geomagnetic Storm</Link>
                 <Link to="hss">High Speed Stream</Link>
                 <Link to='flr'>Solar Flare</Link>
-                <Link to='mpc'>High Speed Stream</Link>
+                <Link to='mpc'>Magnetopause Crossing</Link>
                 <Link to='notifications'>Notifications</Link>
                 <Link to='rbe'>Radion Belt Enhancement</Link>
                 <Link to='sep'>Solar Energetic Particle</Link>

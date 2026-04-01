@@ -40,7 +40,21 @@ h2 {
     height: 50vh;
     border: 2px solid white;
     overflow: hidden;
+     animation: slideInWindow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
 
+@keyframes slideInWindow {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .donki-title2-container,

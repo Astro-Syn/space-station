@@ -13,17 +13,22 @@ const GeomagneticStorm: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className='donki-rs-wrapper'>
       <div className='donki-title2-container'>
         <h2>Geomagnetic Storms</h2>
       </div>
       
+      <div className='donki-rs-content'>
+
+
+     
       {data.slice(0, 5).map((storm, i) => (
         <div key={i}>
           <p>Start: {storm.startTime}</p>
         </div>
       ))}
     </div>
+     </div>
   );
 };
 

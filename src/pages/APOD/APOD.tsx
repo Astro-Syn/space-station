@@ -49,11 +49,14 @@ const APOD = () => {
             <div className='content-container'>
                 <div className='media-container'>
                     {data.media_type === 'image' ? (
+                        <div className='img-wrapper'>
+                        
                         <img
                             className='APOD-img'
                             src={data.url}
                             alt={data.title}
                         />
+                        </div>
                     ) : (
                         <iframe
                             className='APOD-video'
@@ -61,6 +64,7 @@ const APOD = () => {
                             title={data.title}
                             allowFullScreen
                         />
+                        
                     )}
                 </div>
 

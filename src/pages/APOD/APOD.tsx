@@ -48,14 +48,19 @@ const APOD = () => {
 
             <div className='content-container'>
                 <div className='media-container'>
+                    
                     {data.media_type === 'image' ? (
                         <div className='img-wrapper'>
-                        
+                        <div className='img-header-container'>
+                        <h2>Photo</h2>
+                        </div>
+                        <div className='img-container'>
                         <img
                             className='APOD-img'
                             src={data.url}
                             alt={data.title}
                         />
+                        </div>
                         </div>
                     ) : (
                         <iframe

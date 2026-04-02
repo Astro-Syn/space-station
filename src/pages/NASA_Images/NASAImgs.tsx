@@ -64,39 +64,34 @@ const NASAImgs = () => {
         <div className="nasa-imgs-container">
             
             <div className='title-and-search'>
-                <div className='grid-wrapper'>
+                
                   <div className='nasa-imgs-title'>
                    
+                    <div className='media-header-container'>
+                         <h2>NASA Media Library</h2>
+                    </div>
                     
-                        <img src='/Images/grid.png' className='grid-bg'/>
-                    
-                     <h2>NASA Media Library</h2>
                  <div className="search-bar">
                 <input
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search space stuff..."
+                    placeholder="Search..."
                 />
                 <button className='search-btn' onClick={() => fetchImages(query)}>Search</button>
             </div>
                 </div>
             </div>
-           
-
-            </div>
           
-            
+        
 
             
-            
-
-            
-            {loading && <p className='loading-txt'>[Loading...]</p>}
-            {error && <p>{error}</p>}
+           
 
             
             <div className="grid">
+                 {loading && <p className='loading-txt'>[Loading...]</p>}
+            {error && <p>{error}</p>}
                 {items.map((item) => (
                     <div key={item.nasa_id} className="card">
                         
@@ -108,7 +103,7 @@ const NASAImgs = () => {
 
                         
                         <h3>{item.title}</h3>
-                        <p>{item.description.slice(0, 120)}...</p>
+                        <p>{item.description.slice(0, 20)}...</p>
                     </div>
                 ))}
             </div>

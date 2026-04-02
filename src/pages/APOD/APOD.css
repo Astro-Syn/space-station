@@ -191,7 +191,8 @@
     flex: 1;
     padding: 1em;
     overflow-y: auto;
-    font-size: 0.9em;
+    font-size: 1em;
+    line-height: 1.7;
 }
 
 @keyframes flyIn {

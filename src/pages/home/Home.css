@@ -56,9 +56,6 @@ body {
     background: var(--color1);
     gap: 3em;
     width: 100vw;
-    border-top: 2px solid var(--color9);
-    border-left: 2px solid var(--color9);
-    border-right: 2px solid var(--color9);
     border-radius: 0.4em;
     padding: 1.5em;
     z-index: 20;
@@ -75,6 +72,10 @@ body {
 
 .links-container a:hover {
     color: white;
+}
+
+.links-container a:focus {
+    font-weight: bold;
 }
 
 .links {

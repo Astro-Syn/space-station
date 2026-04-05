@@ -64,31 +64,57 @@ const MarsWeather: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
   if (!weather) return <p>No data available</p>;
 
-  return (
-    <div style={{ padding: "1rem" }}>
-      <h2>Mars Weather (InSight)</h2>
-      <p><strong>Sol:</strong> {sol}</p>
+ return (
+  <div className="mars-container">
+    <div className="mars-content">
 
-      <div style={{ border: "1px solid #ccc", padding: "1rem", borderRadius: "8px" }}>
-        <p>
-          <strong>Temperature:</strong>{" "}
-          {weather.AT
-            ? `${weather.AT.av}°C (min: ${weather.AT.mn}°C / max: ${weather.AT.mx}°C)`
-            : "No data"}
-        </p>
+      {/* LEFT PANEL */}
+      <div className="mars-visual">
+        <div className="mars-header">
+          <h2>MARS WEATHER SYSTEM</h2>
+        </div>
 
-        <p>
-          <strong>Pressure:</strong>{" "}
-          {weather.PRE ? `${weather.PRE.av} Pa` : "No data"}
-        </p>
-
-        <p>
-          <strong>Wind Direction:</strong>{" "}
-          {weather.WD?.most_common?.compass_point || "No data"}
-        </p>
+        <div className="mars-art">
+          
+          <div className="mars-overlay" />
+        </div>
       </div>
+
+      {/* RIGHT PANEL */}
+      <div className="mars-info">
+
+        <div className="mars-title">
+          <h2>INSIGHT DATA STREAM</h2>
+          <p>Sol {sol}</p>
+        </div>
+
+        <div className="mars-data">
+
+          <div className="data-card">
+            <h3>Temperature</h3>
+            <p>
+              {weather.AT
+                ? `${weather.AT.av}°C (min ${weather.AT.mn}° / max ${weather.AT.mx}°)`
+                : "No data"}
+            </p>
+          </div>
+
+          <div className="data-card">
+            <h3>Pressure</h3>
+            <p>{weather.PRE ? `${weather.PRE.av} Pa` : "No data"}</p>
+          </div>
+
+          <div className="data-card">
+            <h3>Wind Vector</h3>
+            <p>{weather.WD?.most_common?.compass_point || "No data"}</p>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  );
+  </div>
+);
 };
 
 export default MarsWeather;

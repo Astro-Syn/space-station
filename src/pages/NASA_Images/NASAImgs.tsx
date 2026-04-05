@@ -43,7 +43,9 @@ const NASAImgs = () => {
           media_type: 'image',
           preview: item.links?.[0]?.href || ''
         }))
-        .filter((item: NasaItem) => item.preview !== '');
+        .filter((item: NasaItem) => item.preview !== '')
+        .slice(0, 10);
+        ;
 
       setItems(results);
     } catch (err) {
@@ -138,7 +140,7 @@ const NASAImgs = () => {
     >
       <div className="xp-title-bar" onMouseDown={startDrag}>
         <span>{activeItem.title}</span>
-        <button onClick={() => setActiveItem(null)}>X</button>
+        <button onClick={() => setActiveItem(null)}>✕</button>
       </div>
 
       <div className="xp-content">

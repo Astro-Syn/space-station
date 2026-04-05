@@ -74,13 +74,12 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 250px;
     gap: 2rem;
     min-width: 60vw;
     flex: 2;
     padding-top: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     overflow-y: auto;
     border-left: 1px solid white;
     background: rgba(0, 0, 0, 0.2);
@@ -91,24 +90,29 @@
 .card {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+   aspect-ratio: 1 / 1;
+   max-height: 30vh;
+       position: relative;
+    font-family: "Geo", monospace;
+    background-image: url('/Images/line-texture.jpg');
+    background-size: cover;
      color: #00ff9f;
     border-radius: 0.3em;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
+
 .card img,
 .card video {
     width: 100%;
-    height: 140px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -123,11 +127,8 @@
     font-size: 0.75rem;
     margin: 0 0.5rem 0.5rem;
     opacity: 0.75;
-
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-
     overflow: hidden;
 }
 
@@ -139,18 +140,13 @@
     );
 }
 
-.card {
-    position: relative;
-    font-family: "Geo", monospace;
-    background-image: url('/Images/line-texture.jpg');
-    background-size: cover;
-}
+
 
 .card::before {
      content: "";
     position: absolute;
     inset: 2px;
-    background: rgba(0, 0, 0, 0.9); 
+    background: rgba(0, 0, 0, 0.3); 
     backdrop-filter: saturate(0.8); 
     z-index: 0;
 }
@@ -165,32 +161,48 @@
 .xp-window {
   width: 500px;
   background: #c0c0c0;
-  border: 2px solid #000;
-  box-shadow: 4px 4px 0px #000;
+  border: 2px solid white;
   z-index: 999;
+  
 }
 
 .xp-title-bar {
-  background: linear-gradient(to right, #000080, #1084d0);
-  color: white;
+  background: white;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   cursor: grab;
-  font-weight: bold;
+  font-size: 1.3em;
+  font-family: "Geo", monospace;
+    font-weight: bold;
+    margin: 0;
+    color: black;
 }
 
 .xp-title-bar button {
-  background: #c0c0c0;
-  border: 2px outset #fff;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
 .xp-content {
-  padding: 10px;
-  background: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  background: url('/Images/line-texture.jpg');
+}
+
+.xp-content::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
 }
 
 .xp-content img {
@@ -198,10 +210,15 @@
   margin-bottom: 10px;
 }
 
+.xp-content p {
+    position: relative;
+    z-index: 6;
+    padding: 1em;
+}
+
 .card {
   cursor: pointer;
 }
-
 
 
 @media (max-width: 900px) {

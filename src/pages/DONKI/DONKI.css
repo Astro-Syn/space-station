@@ -38,7 +38,7 @@ h2 {
     width: 40vw;
     height: 50vh;
     border: 2px solid white;
-   
+   overflow: hidden;
      animation: slideInWindow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -64,7 +64,7 @@ h2 {
 }
 
 .donki-rs-content {
-    padding-left: 0.5em;
+    
     position: absolute;
     overflow-y: auto;
     height: 95%;

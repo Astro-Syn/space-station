@@ -34,16 +34,17 @@
 .nasa-imgs-title {
     height: 10em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
     flex-direction: column;
+    padding-top: 1em;
     background-image: url('/Images/grid.png');
     background-size: cover;
 }
 
 .search-bar {
     width: 100%;
-    margin-bottom: 0.5em;
+    
     z-index: 4;
 }
 
@@ -75,26 +76,32 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     justify-items: center;
-    align-items: center;
+    align-items: start;
+    align-content: start;
     justify-content: center;
     align-content: center;
     min-width: 50vw;
     flex: 2;
-    padding-top: 3rem;
+ padding: 2rem 1rem;
     margin-left: 1rem;
     overflow-y: auto;
     border-left: 1px solid white;
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 10, 20, 0.6),
-        rgba(0, 0, 0, 0.2)
-    );
-    height: 95%;
+    
+    height: 100%;
     position: relative;
 }
 
+
+.grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/Images/space-texture.jpg');
+    opacity: 0.4; 
+    z-index: 0;
+}
 
 .card {
     display: flex;
@@ -136,9 +143,14 @@
     content: "";
     position: absolute;
     inset: 2px;
-    background: rgba(0, 99, 192, 0.377);
+    background: rgba(0, 14, 27, 0.377);
     backdrop-filter: saturate(0.8);
     z-index: 0;
+}
+
+.card:hover::before {
+    background: transparent;
+    backdrop-filter: saturate(1);
 }
 
 

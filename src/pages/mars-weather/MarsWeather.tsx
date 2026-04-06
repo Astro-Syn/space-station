@@ -72,6 +72,7 @@ const MarsWeather: React.FC = () => {
       <div className="mars-visual">
         <div className="mars-header">
           <h2>MARS WEATHER SYSTEM</h2>
+          
         </div>
 
         <div className="mars-art">
@@ -85,7 +86,8 @@ const MarsWeather: React.FC = () => {
 
         <div className="mars-title">
           <h2>INSIGHT DATA STREAM</h2>
-          <p>Sol {sol}</p>
+          <p><span className='sol-deco'>///////////////////</span> Sol {sol} </p>
+          
         </div>
 
         <div className="mars-data">

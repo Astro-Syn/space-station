@@ -60,7 +60,7 @@ const MarsWeather: React.FC = () => {
     fetchWeather();
   }, []);
 
-  if (loading) return <p>Scanning Martian atmosphere...</p>;
+  if (loading) return <p>Loading Mars Weather...</p>;
   if (error) return <p>Error: {error}</p>;
   if (!weather) return <p>No data available</p>;
 

@@ -104,17 +104,20 @@ const NASAImgs = () => {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search..."
             />
-            <button onClick={() => fetchImages(query)}>
+            <button 
+            className='search-btn'
+            onClick={() => fetchImages(query)}>
               Search
             </button>
           </div>
         </div>
-      </div>
+      </div> 
 
       <div className="grid">
         {loading && <p>[Loading...]</p>}
         {error && <p>{error}</p>}
 
+      
         {items.map((item) => (
           <div
             key={item.nasa_id}

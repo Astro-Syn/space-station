@@ -99,11 +99,16 @@ const NASAImgs = () => {
 
           <div className="search-bar">
             <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search..."
-            />
+  type="text"
+  value={query}
+  onChange={(e) => setQuery(e.target.value)}
+  placeholder="Search..."
+  onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      fetchImages(query);
+    }
+  }}
+/>
             <button 
             className='search-btn'
             onClick={() => fetchImages(query)}>

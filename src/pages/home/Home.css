@@ -273,7 +273,7 @@ body {
         align-items: center;
         z-index: 30;
         left: 4em;
-        top: 2em;
+        top: 0;
         color: white;
         z-index: 998;
     }

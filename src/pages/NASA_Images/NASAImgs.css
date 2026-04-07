@@ -20,6 +20,7 @@
     position: relative;
     width: 60%;
     z-index: 1;
+    margin-left: 1em;
 }
 
 .title-and-search h2 {
@@ -71,6 +72,12 @@
     font-weight: bold;
     letter-spacing: 0.1em;
     font-family: "Geo", monospace;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.search-btn:hover {
+    background: var(--color5);
 }
 
 .grid {
@@ -261,6 +268,7 @@
 
 @media (max-width: 900px) {
     .grid {
+       padding-top: 50em;
         grid-template-columns: 1fr;
     }
 }
@@ -279,4 +287,14 @@
     .title-and-search {
         width: 100%;
     }
+
+    .title-and-search h2 {
+    z-index: 3;
+    font-size: 3.5em;
+    font-weight: 200;
+    margin-top: 0.5em;
+    color: white;
+    text-shadow: 5px 5px 20px black;
+    text-wrap: wrap;
+}
 }

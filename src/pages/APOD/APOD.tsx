@@ -12,20 +12,14 @@ interface APODData {
 const APOD = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
     const [data, setData] = useState<APODData | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchAPOD = async () => {
             try {
-                const res = await fetch(
-                    `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
-                );
-
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
+                const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
+                if (!res.ok) throw new Error('Network response was not ok');
                 const json: APODData = await res.json();
                 setData(json);
             } catch (err) {
@@ -34,7 +28,6 @@ const APOD = () => {
                 setLoading(false);
             }
         };
-
         fetchAPOD();
     }, []);
 
@@ -44,51 +37,47 @@ const APOD = () => {
 
     return (
         <div className='APOD-container'>
-            
+            {/* Info / Title */}
+            <div className='info-container'>
+                <div className='date-time'>
+                    <h2>{data.title}</h2>
+                    <p>{data.date}</p>
+                </div>
+            </div>
 
-            <div className='content-container'>
-                <div className='media-container'>
+            {/* Media */}
+            <div className='media-container'>
+                  {/* Explanation */}
+            <div className='explain-container'>
+                <p>{data.explanation}</p>
+            </div>
+                {data.media_type === 'image' ? (
                     
-                    {data.media_type === 'image' ? (
-                        <div className='img-wrapper'>
+                    <div className='img-wrapper'>
                         <div className='img-header-container'>
-                        <h2>Photo</h2>
+                            <h2>Photo</h2>
                         </div>
                         <div className='img-container'>
-                        <img
-                            className='APOD-img'
-                            src={data.url}
-                            alt={data.title}
-                        />
+                            <img
+                                className='APOD-img'
+                                src={data.url}
+                                alt={data.title}
+                            />
                         </div>
-                        </div>
-                    ) : (
-                        <iframe
-                            className='APOD-video'
-                            src={data.url}
-                            title={data.title}
-                            allowFullScreen
-                        />
-                        
-                    )}
-                </div>
-
-                <div className='info-container'>
-                    <div className='date-time'>
-                        <div className='img-container2'>
-                    <img src='/Images/grid.png'/>
-            </div>
-                <h2>{data.title}</h2>
-                <p>[{data.date}]</p>
-                
-            </div>
-            
-                    <div className='explain-container'>
-                    <p>{data.explanation}</p>
+                      
                     </div>
                     
-                </div>
+                ) : (
+                    <iframe
+                        className='APOD-video'
+                        src={data.url}
+                        title={data.title}
+                        allowFullScreen
+                    />
+                )}
             </div>
+
+            
         </div>
     );
 };

@@ -1,34 +1,63 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import './Home.css';
 import { RiAliensLine } from "react-icons/ri";
+import { useState, useEffect, useRef } from 'react';
+import { BiMenuAltLeft } from "react-icons/bi";
 
 const Home = () => {
     const location = useLocation();
+    const [menuOpen, setMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
 
+
+useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (
+            menuRef.current &&
+            !menuRef.current.contains(event.target as Node)
+        ) {
+            setMenuOpen(false);
+        }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+    };
+}, [menuOpen]);
     return (
         <div className='home-container'>
             <div className='home-wrapper'>
 
-                
-                <div className='links-container'>
-                    <div className='links'>
-                        <Link to='/'>Home</Link>
-                        <Link to="/apod">Photo Of the Day</Link>
-                        <Link to="marsWeather">Mars Weather</Link>
-                        <Link to="nasaimgs">NASA Images and Video</Link>
-                        <Link to='donki'>DONKI</Link>
+                <div className='links-container' ref={menuRef}>
+
+                     <div className='links-container'>
+
+                    <div
+                    className={`hamburger ${menuOpen ? 'open' : ''}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        <BiMenuAltLeft color="white" size={50}/>
                     </div>
+
+                     <div className={`links ${menuOpen ? 'show' : ''}`}>
+        <Link to='/' onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/apod" onClick={() => setMenuOpen(false)}>Photo Of the Day</Link>
+        <Link to="marsWeather" onClick={() => setMenuOpen(false)}>Mars Weather</Link>
+        <Link to="nasaimgs" onClick={() => setMenuOpen(false)}>NASA Images and Video</Link>
+        <Link to='donki' onClick={() => setMenuOpen(false)}>DONKI</Link>
+    </div>
                 </div>
+
+                </div>
+               
 
                 
                 {location.pathname === '/' && (
                     <>
-                        
-
-                        
-  
-
-                        
                         <div className='home-text-container'>
                             <div className='title-wrapper'>
                                 <h1 className='title-text'>

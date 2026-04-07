@@ -13,6 +13,7 @@
 
 .loading-txt {
     letter-spacing: 0.1em;
+    font-size: 3em;
 }
 
 .title-and-search {
@@ -44,7 +45,6 @@
 
 .search-bar {
     width: 100%;
-    
     z-index: 4;
 }
 
@@ -75,21 +75,20 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
     justify-items: center;
     align-items: start;
     align-content: start;
     justify-content: center;
     align-content: center;
-    min-width: 50vw;
+    min-width: 60vw;
     flex: 2;
- padding: 2rem 1rem;
+    padding: 1rem 1rem;
     margin-left: 1rem;
     overflow-y: auto;
     border-left: 1px solid white;
-    
-    height: 100%;
+    height: 95%;
     position: relative;
 }
 
@@ -99,6 +98,7 @@
     position: absolute;
     inset: 0;
     background-image: url('/Images/space-texture.jpg');
+    background-repeat: repeat;
     opacity: 0.4; 
     z-index: 0;
 }
@@ -114,12 +114,14 @@
     background-size: cover;
     border-radius: 0.3em;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease-in;
     cursor: pointer;
+   
+    
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -143,14 +145,16 @@
     content: "";
     position: absolute;
     inset: 2px;
-    background: rgba(0, 14, 27, 0.377);
+    background: rgba(0, 14, 27, 0.644);
     backdrop-filter: saturate(0.8);
     z-index: 0;
+    
 }
 
 .card:hover::before {
     background: transparent;
     backdrop-filter: saturate(1);
+    
 }
 
 
@@ -167,6 +171,8 @@
     border: 2px solid var(--color5);
     border-radius: 0.3em;
     z-index: 999;
+     animation: xpPopIn 0.25s ease-out;
+    transform-origin: center;
 }
 
 
@@ -236,6 +242,20 @@
     line-height: 1.4;
     z-index: 6;
     padding: 1em;
+}
+
+@keyframes xpPopIn {
+    0% {
+        transform: scale(0.6) translateY(40px);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05) translateY(-5px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
 }
 
 

@@ -45,6 +45,13 @@ body {
     overflow: hidden;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 30;
+}
 
 
 .links-container {
@@ -252,4 +259,36 @@ body {
     flex-direction: row;
     gap: 1rem;
     padding: 0.6em;
+}
+
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 4em;
+        top: 0.5em;
+    }
+
+    .links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 60vw;
+        background: black;
+        border-left: 1px solid white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+        padding-left: 5em;
+        font-size: 1.2em;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .links.show {
+        transform: translateX(0);
+    }
 }

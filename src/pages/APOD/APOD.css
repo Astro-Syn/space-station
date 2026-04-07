@@ -12,7 +12,7 @@
 }
 
 .APOD-container {
-    background: red;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,7 +26,6 @@
 }
 
 .media-container {
-    background: blue;
     padding: 6em;
     margin-top: 5em;
     flex: 1;
@@ -43,7 +42,6 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    background: green;
     gap: 1em;
 }
 
@@ -53,7 +51,6 @@
     overflow-y: auto;
     font-size: 1em;
     line-height: 1.7;
-    background: green;
     width: 60%;
     text-align: center;
     animation: fadeInText 0.4s ease-in forwards;
@@ -144,7 +141,6 @@
 }
 
 
-
 .APOD-img {
     width: 80%;
     height: 80%;
@@ -163,10 +159,11 @@
 }
 
 .info-container {
-    background: pink;
+    background-image: url('/Images/grid.png');
+    background-size: cover;
     flex: 1;
     display: flex;
-    height: 60%;
+    height: 20%;
     flex-direction: column;
     justify-content: center;
     border-radius: 1em;
@@ -232,12 +229,18 @@
     overflow: scroll;
 }
 
+.info-container {
+    width: 100%;
+    margin-top: 15em;
+    height: 20%;
+    text-align: center;
+}
+
   .media-container {
     order: 2;
     flex: none;
     width: 100%;
     height: 100%;
-    background: blue;
     display: flex;
     overflow: auto;
     flex-direction: column-reverse;
@@ -255,5 +258,11 @@
   .APOD-img {
     
     height: auto;
+  }
+
+  .explain-container {
+    width: 90%;
+    overflow: visible;
+    line-height: 2;;
   }
 }

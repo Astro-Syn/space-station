@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './SolarEnergeticParticle.css';
 
 const SolarEnergeticParticle = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
@@ -18,12 +19,18 @@ const SolarEnergeticParticle = () => {
             </div>
             
             <div className='donki-rs-content'>
+                <div className='sep-img'></div>
+
+                <div className='sep-content'>
+
+                
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>ID:</strong> {item.sepID}</p>
                     <p><strong>Start:</strong> {item.eventTime}</p>
                 </div>
             ))}
+        </div>
         </div>
         </div>
     );

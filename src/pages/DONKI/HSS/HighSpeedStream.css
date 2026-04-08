@@ -1,0 +1,14 @@
+.hss-img {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background-image: url('/Images/highspeedstream-pic.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.hss-content {
+    position: relative;
+    z-index: 2;
+}

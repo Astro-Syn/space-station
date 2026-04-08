@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './HighSpeedStream.css';
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -19,6 +20,10 @@ const HighSpeedStream: React.FC = () => {
       </div>
     
     <div className='donki-rs-content'>
+      <div className='hss-img'></div>
+      <div className='hss-content'>
+
+      
       {data.slice(0, 5).map((hss, i) => (
         <div key={i} className="donki-rs-text">
           <p>Event Time: {hss.eventTime}</p>
@@ -26,6 +31,7 @@ const HighSpeedStream: React.FC = () => {
       ))}
     </div>
       
+    </div>
     </div>
   );
 };

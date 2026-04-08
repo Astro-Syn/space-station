@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./GeomagneticStorm.css";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -111,6 +112,10 @@ const GeomagneticStorm: React.FC = () => {
       </div>
 
       <div className="donki-rs-content">
+        <div className="gms-img"></div>
+        <div className='gms-content'>
+
+        
         
         {loading && <p>Loading geomagnetic storm data...</p>}
 
@@ -135,6 +140,7 @@ const GeomagneticStorm: React.FC = () => {
             </div>
           ))}
       </div>
+    </div>
     </div>
   );
 };

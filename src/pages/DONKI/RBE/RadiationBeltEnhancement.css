@@ -1,7 +1,7 @@
-.mpc-img {
+.rbe-img {
     position: absolute;
     inset: 0;
-    background-image: url('/Images/magnetopause-x.png');
+    background-image: url('/Images/radiation-belt-en-pic.png');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -12,7 +12,7 @@
     z-index: 2;
 }
 
-.mpc-content {
+.rbe-content {
     position: relative;
     z-index: 2;
 }

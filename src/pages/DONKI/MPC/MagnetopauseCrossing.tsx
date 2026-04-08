@@ -19,7 +19,12 @@ const MagnetopauseCrossing = () => {
                 <h2>Magnetopause Crossing</h2>
             </div>
             
+
             <div className='donki-rs-content'>
+            <div className='mpc-img'></div>
+            
+
+            <div className='mpc-content'>
 
             
             {data.map((item, i) => (
@@ -28,6 +33,7 @@ const MagnetopauseCrossing = () => {
                     <p><strong>Time:</strong> {item.eventTime}</p>
                 </div>
             ))}
+        </div>
         </div>
         </div>
     );

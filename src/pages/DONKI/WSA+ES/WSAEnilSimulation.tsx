@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import './WSAEnilSimulation.css';
+
 
 const WASEnilSimulation = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
@@ -17,6 +19,12 @@ const WASEnilSimulation = () => {
             </div>
            
            <div className='donki-rs-content'>
+            <div className='wsa-img'></div>
+
+            <div className='wsa-content'>
+
+
+            
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>ID:</strong> {item.simulationID}</p>
@@ -24,6 +32,7 @@ const WASEnilSimulation = () => {
                 </div>
             ))}
         </div>
+         </div>
          </div>
     );
 };

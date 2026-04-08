@@ -19,3 +19,14 @@
 .description-portal.show {
   opacity: 1;
 }
+
+.cme-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('/Images/cme-pic.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 2;
+}

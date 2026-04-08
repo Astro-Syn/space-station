@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import './RadiationBeltEnhancement.css';
+
 
 const RadiationBeltEnhancement = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
@@ -19,12 +21,18 @@ const RadiationBeltEnhancement = () => {
             
           
             <div className='donki-rs-content'>
+                <div className='rbe-img'></div>
+
+                <div className='rbe-content'>
+
+                
             {data.map((item, i) => (
                 <div key={i}>
                     <p><strong>ID:</strong> {item.rbeID}</p>
                     <p><strong>Start:</strong> {item.eventTime}</p>
                 </div>
             ))}
+        </div>
         </div>
         </div>
     );

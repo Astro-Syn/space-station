@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './WSAEnilSimulation.css';
+import { GiAlienSkull } from "react-icons/gi";
 
 
 const WASEnilSimulation = () => {
@@ -16,6 +17,7 @@ const WASEnilSimulation = () => {
         <div className='donki-rs-wrapper'>
             <div className='donki-title2-container'>
                      <h2>WSA-Enlil Simulations</h2>
+                     <GiAlienSkull color={'black'} size={30}/>
             </div>
            
            <div className='donki-rs-content'>

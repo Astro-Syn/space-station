@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SolarFlare.css";
+import { GiAlienSkull } from "react-icons/gi";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -63,7 +64,9 @@ const SolarFlare: React.FC = () => {
           >
             Solar Flares
           </h2>
+          <GiAlienSkull color={'black'} size={30} />
         </div>
+        
 
         <div className="donki-rs-content">
           <div className="sf-img"></div>

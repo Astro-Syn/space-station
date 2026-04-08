@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./GeomagneticStorm.css";
+import { GiAlienSkull } from "react-icons/gi";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -109,6 +110,7 @@ const GeomagneticStorm: React.FC = () => {
     <div className="donki-rs-wrapper">
       <div className="donki-title2-container">
         <h2>Geomagnetic Storms</h2>
+        <GiAlienSkull color={'black'} size={30} />
       </div>
 
       <div className="donki-rs-content">

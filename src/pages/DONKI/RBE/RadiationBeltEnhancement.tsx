@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './RadiationBeltEnhancement.css';
+import { GiAlienSkull } from "react-icons/gi";
 
 
 const RadiationBeltEnhancement = () => {
@@ -17,6 +18,7 @@ const RadiationBeltEnhancement = () => {
             <div className='donki-rs-wrapper'>
                   <div className='donki-title2-container'>
                 <h2>Radiation Belt Enhancement</h2>
+                <GiAlienSkull color={'black'} size={30} />
             </div>
             
           

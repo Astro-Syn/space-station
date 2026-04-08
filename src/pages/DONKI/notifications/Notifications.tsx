@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import "./Notifications.css";
+import { GiAlienSkull } from "react-icons/gi";
 
 type Notification = {
   messageBody: string;
@@ -20,6 +21,7 @@ const Notifications = () => {
     <div className='donki-rs-wrapper'>
       <div className='donki-title2-container'>
         <h2>Transmission Feed</h2>
+        <GiAlienSkull color={'black'} size={30} />
       </div>
 
       <div className='donki-rs-content'>

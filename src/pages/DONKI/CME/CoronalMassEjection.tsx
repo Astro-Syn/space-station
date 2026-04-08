@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './CoronalMassEjection.css';
+import { GiAlienSkull } from "react-icons/gi";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -93,6 +94,7 @@ const CoronalMassEjection: React.FC = () => {
           >
             Coronal Mass Ejections
           </h2>
+          <GiAlienSkull color={'black'} size={30} />
         </div>
 
         <div className="donki-rs-content">

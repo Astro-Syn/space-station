@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './SolarEnergeticParticle.css';
+import { GiAlienSkull } from "react-icons/gi";
 
 const SolarEnergeticParticle = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
@@ -16,6 +17,7 @@ const SolarEnergeticParticle = () => {
             
             <div className='donki-title2-container'>
                 <h2>Solar Energetic Particles</h2>
+                <GiAlienSkull color={'black'} size={30}/>
             </div>
             
             <div className='donki-rs-content'>

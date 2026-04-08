@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './MagnetopauseCrossing.css';
+import { GiAlienSkull } from "react-icons/gi";
 
 
 const MagnetopauseCrossing = () => {
@@ -17,6 +18,7 @@ const MagnetopauseCrossing = () => {
 
             <div className='donki-title2-container'>
                 <h2>Magnetopause Crossing</h2>
+                <GiAlienSkull color={'black'} size={30} />
             </div>
             
 

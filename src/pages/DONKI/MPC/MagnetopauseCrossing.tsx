@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import './MagnetopauseCrossing.css';
+
 
 const MagnetopauseCrossing = () => {
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;

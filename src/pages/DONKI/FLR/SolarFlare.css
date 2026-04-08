@@ -38,9 +38,10 @@ h2 {
     position: relative;
     background: url('/Images/line-texture.jpg');
     background-size: cover;
-    width: 40vw;
+    width: 30vw;
     height: 50vh;
     border: 2px solid white;
+    cursor: default;
     overflow: hidden;
     animation: slideInWindow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -88,7 +89,6 @@ h2 {
     left: 0;
     width: 100%;
     height: calc(100% - 2em);
-
     overflow: hidden;
 }
 
@@ -110,11 +110,9 @@ h2 {
     position: absolute;
     content: "";
     inset: 0;
-
     background-image: url('/Images/line-texture.jpg');
     background-size: contain;
-    opacity: 0.1;
-
+    opacity: 0.3;
     pointer-events: none;
     z-index: 2;
 }
@@ -124,14 +122,11 @@ h2 {
 .sf-content {
     position: relative;
     z-index: 3;
-
     display: flex;
     flex-direction: column;
     gap: 1em;
-
     height: 100%;
     width: 100%;
-
     overflow-y: auto;
     padding: 0.8em;
 }
@@ -141,7 +136,7 @@ h2 {
 .flare-card {
     background: rgba(15, 15, 20, 0.9);
     border: 1px solid rgba(255, 120, 0, 0.25);
-    border-radius: 0.4em;
+    border-radius: 0.2em;
     padding: 0.6em;
     font-size: 0.9rem;
     display: flex;
@@ -203,4 +198,122 @@ h2 {
   50% { clip-path: inset(60% 0 10% 0); }
   75% { clip-path: inset(10% 0 60% 0); }
   100% { clip-path: inset(0 0 80% 0); }
+}
+
+.sf-description {
+    width: 90%;
+    margin-top: 1em;
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid rgba(255, 120, 0, 0.25);
+    border-radius: 0.2em;
+    padding: 0.6em;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.flare-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.flare-wrapper::before,
+.flare-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.flare-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #0f0f14, transparent);
+}
+
+.flare-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #0f0f14, transparent);
+}
+
+.flare-strengths {
+    width: 300%;
+    margin: 0;
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid rgba(255, 120, 0, 0.25);
+    animation: strengthScroll 10s linear infinite;
+     padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.flare-strengths span {
+    letter-spacing: 2px;
+    margin-right: 2em;   
+}
+
+
+@keyframes strengthScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.title-hover-area {
+  position: relative;
+}
+
+
+.hover-panel {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 300px;
+  padding: 0.6em;
+  background: rgba(15, 15, 20, 0.95);
+  border: 1px solid rgba(255, 120, 0, 0.25);
+  border-radius: 0.2em;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+  transition: 0.2s ease;
+  z-index: 60;
+}
+
+
+.title-hover-area:hover .hover-panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description-portal {
+  position: fixed;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  padding: 0.8em 1em;
+  background: rgba(15, 15, 20, 0.95);
+  border: 1px solid rgba(255, 120, 0, 0.25);
+  border-radius: 0.3em;
+  
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 2000;
+}
+
+.sf-description-portal.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }

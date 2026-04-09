@@ -29,7 +29,9 @@ const Home = () => {
 
     return (
         <div className='home-container'>
+              
             <div className='home-wrapper'>
+             
 
               
                 <div className='links-container' ref={menuRef}>
@@ -68,12 +70,16 @@ const Home = () => {
                            
                         </div>
 
-                        <div className='home-side-text-wrapper'>
-                            <p>System Initiated__ 00300KB</p>
-                        </div>
+                       <div className='home-side-text-wrapper'>
+    <p className="cyber-line">
+        Initiating Combat Mode__ <span></span>
+    </p>
+    <p className="cyber-line">
+        System Redefined <span></span>
+    </p>
+</div>
 
-                        <img src='/Images/space-texture.jpg' className='space-texture'/>
-
+                       
                         <div className='bottom-chaos'>
                             <div className='barcode-home'>
                                 <img src='/Images/barcode.png'/>

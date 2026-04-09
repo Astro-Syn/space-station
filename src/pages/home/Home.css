@@ -28,6 +28,15 @@ body {
     align-items: center;
 }
 
+.top-grad-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), black);
+    z-index: 2;
+}
+
 .home-wrapper {
     position: relative;
     display: flex;
@@ -74,26 +83,32 @@ body {
 
 .links-container {
     position: relative;
+    top: 5%;
     display: flex;
-    justify-content: center;
-    background: var(--color1);
+    justify-content: end;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
     gap: 3em;
-    width: 100%;
+    width: 90%;
     padding: 1.5em;
     z-index: 5;
 }
 
 .links-container a {
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 200;
+    padding-right: 1em;
     letter-spacing: 0.1em;
     transition: 0.3s ease-in;
-    color: var(--color4);
+    color: white;
+    transition: 0.2s ease-in;
 }
 
 .links-container a:hover {
-    color: white;
+    transform: scaleX(1.1);
+    color: var(--color9);
+    
 }
 
 .links-container a:focus {
@@ -115,9 +130,9 @@ body {
 
 .home-text-container {
     width: 100%;
-    height: auto;
+    height: 70%;;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -127,10 +142,21 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 90%;
+    width: 50%;
     margin-bottom: 2em;
     padding: 2em;
     line-height: 0.9;
+    
+}
+
+.title-wrapper::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1%;
+    bottom: 24%;
+    z-index: 10;
+    background: black;
 }
 
 .title-text1 {
@@ -147,8 +173,7 @@ body {
     font-size: clamp(3rem, 12cqi, 25rem);
     margin: 0;
     font-weight: 700;
-    color: black;
-    -webkit-text-stroke: 4px white;
+    color: white;
     user-select: none;
     z-index: 1;
 }
@@ -159,28 +184,34 @@ body {
     content: "";
     width: 100%;
     height: 20vh;
+
     background-image: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.041) 0%,
         rgba(0, 0, 0, 0.664) 15%,
-        rgba(13, 51, 19, 0.425) 35%,
-        rgba(47, 216, 75, 0.9) 50%,
-        rgba(16, 65, 24, 0.459) 65%,
+        rgba(13, 51, 19, 0.425) 25%,
+        rgba(47, 216, 151, 0.9) 40%,
+        rgba(16, 65, 24, 0.459) 55%,
         rgba(0, 0, 0, 0.753) 85%,
         rgba(0, 0, 0, 0.021) 100%
     );
-    z-index: -1;
-}
 
-@keyframes riseUp {
-    from {
-        transform: translateY(70px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+
+    z-index: -1;
 }
 
 .title2-txt {
@@ -204,15 +235,72 @@ body {
     opacity: 0.2;
 }
 
+.home-side-text-wrapper {
+    position: absolute;
+    right: -10em;
+    top: 50%;
+    transform: rotate(-90deg);
+    display: flex;
+    flex-direction: row;
+    font-family: "Oxanium", monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: #81EC86;
+    z-index: 4;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+.cyber-line {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cyber-line::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #81EC86;
+    opacity: 0.4;
+    filter: blur(2px);
+}
+
+
+@keyframes scramble {
+    0% { content: "0310KB"; }
+    10% { content: "89A2KB"; }
+    20% { content: "5521KB"; }
+    30% { content: "77FFKB"; }
+    40% { content: "1200KB"; }
+    50% { content: "9999KB"; }
+    60% { content: "42A1KB"; }
+    70% { content: "0088KB"; }
+    80% { content: "3001KB"; }
+    90% { content: "0301KB"; }
+    100% { content: "0300KB"; }
+}
+
+
+.cyber-line span::after {
+    content: "00300KB";
+    animation: scramble 1.2s steps(10) infinite;
+    margin-left: 0.5em;
+}
+
 .bottom-chaos {
     display: flex;
     position: absolute;
-    bottom: 10em;
+    bottom: 5em;
+    left: 1%;
     z-index: 2;
     height: 11vh;
-    width: 90%;
+    width: 60%;
     font-family: "Geo";
     color: white;
+    
 }
 
 .barcode-home {

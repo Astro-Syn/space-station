@@ -56,12 +56,20 @@ const Home = () => {
                 {location.pathname === '/' && (
                     <>
                         <div className='home-text-container'>
+
+
                             <div className='title-wrapper'>
-                                <h1 className='title-text'>Space Station</h1>
-                                <span className='title2-txt'>
-                                    <p>NASA API</p>
+                                <h1 className='title-text1'>Space </h1>
+                                <h1 className='title-text2'>Station</h1>
+                                 <span className='title2-txt'>
+                                    <p>[  Featuring NASA API ]</p>
                                 </span>
                             </div>
+                           
+                        </div>
+
+                        <div className='home-side-text-wrapper'>
+                            <p>System Initiated__ 00300KB</p>
                         </div>
 
                         <img src='/Images/space-texture.jpg' className='space-texture'/>

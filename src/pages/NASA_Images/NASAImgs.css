@@ -8,7 +8,7 @@
     height: 90%;
     margin-top: 3em;
     overflow: hidden;
-    border: 1px solid white;
+   
 }
 
 .loading-txt {
@@ -120,11 +120,9 @@
     background-image: url('/Images/line-texture.jpg');
     background-size: cover;
     border-radius: 0.3em;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.671);
     transition: transform 0.3s ease-in;
-    cursor: pointer;
-   
-    
+    cursor: pointer;    
 }
 
 .card:hover {
@@ -152,7 +150,7 @@
     content: "";
     position: absolute;
     inset: 2px;
-    background: rgba(0, 14, 27, 0.644);
+    background: rgba(3, 158, 112, 0.281);
     backdrop-filter: saturate(0.8);
     z-index: 0;
     

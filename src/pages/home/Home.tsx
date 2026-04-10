@@ -1,6 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import './Home.css';
-import { RiAliensLine } from "react-icons/ri";
 import { useState, useEffect, useRef } from 'react';
 import { BiMenuAltLeft } from "react-icons/bi";
 import { RiCloseLargeLine } from "react-icons/ri";
@@ -82,7 +81,7 @@ const Home = () => {
                        
                         <div className='bottom-chaos'>
                         <div className='desc-banner'>
-                            Features
+                            Features 
                         </div>
                         
                         <div className='desc-section'>

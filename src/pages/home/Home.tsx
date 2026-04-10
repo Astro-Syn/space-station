@@ -81,29 +81,28 @@ const Home = () => {
 
                        
                         <div className='bottom-chaos'>
-                            <div className='barcode-home'>
-                                <img src='/Images/barcode.png'/>
-                            </div>
-
-                            <div className='credits'>
-                                <div className='webdev'>
-                                    <p>Web Dev</p>
-                                    <p>Kelsey Balajti</p>
-                                </div>
-                                <span className='github-sec'>
-                                    <p>Github <p className='gitname'>AstroSyn</p></p>
-                                    <img src='/Images/githublogo.svg' className='gitlogo'/>
-                                </span>
-                            </div>
-
-                            <div className='desc-section'>
+                        <div className='desc-banner'>
+                            Features
+                        </div>
+                        
+                        <div className='desc-section'>
                                 <p>
-                                    This website, developed by Kelsey, leverages the power of NASA’s public APIs to deliver an engaging and educational exploration of space. It offers a curated collection of pages featuring astronomical imagery, planetary data, and insights into ongoing space missions. Visitors can navigate through a variety of interactive and visually compelling content designed to inspire curiosity about the universe. Whether you are interested in daily cosmic phenomena, detailed views from Mars rovers, or the broader wonders of our solar system and beyond, this platform provides an accessible and immersive experience. Embark on a journey through space and discover the remarkable science and beauty that define our galaxy.
+                                    This website leverages the power of NASA’s public APIs to deliver an engaging and educational exploration of space. It offers a curated collection of pages featuring astronomical imagery, planetary data, and insights into ongoing space missions. Visitors can navigate through a variety of interactive and visually compelling content designed to inspire curiosity about the universe. 
                                 </p>
-                                <div>
-                                    <RiAliensLine />
                                 </div>
-                            </div>
+                         <div className='barcode-creds'>
+                             <img 
+                         className='barcode-png'
+                         src='/Images/barcode.png'/>
+                           <div className='credits'>
+                            <p>Github: AstroSyn</p>
+                           </div>
+                         </div>
+                        
+
+                            
+
+                        
                         </div>
                     </>
                 )}

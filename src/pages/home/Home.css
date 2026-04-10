@@ -301,8 +301,7 @@ body {
 .desc-banner {
     background: white;
     color: black;
-    min-width: 15%;
-    max-width:20%;
+    min-width: 25%;
     padding: 0.3em;
     font-size: 1.1em;
     letter-spacing: 1px;
@@ -481,5 +480,23 @@ body {
 
     .cyber-line {
      top: 8em;
+    }
+
+    .bottom-chaos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+     
+    }
+
+    .desc-banner {
+        align-self: start;
+    }
+
+    .barcode-creds {
+        align-self: flex-start;
     }
 }

@@ -143,7 +143,7 @@ const NASAImgs = () => {
     <div
       ref={viewerRef}
       className="xp-window"
-      style={{ top: '20%', left: '30%', position: 'fixed' }}
+     
       onClick={(e) => e.stopPropagation()}
     >
       <div className="xp-title-bar" onMouseDown={startDrag}>

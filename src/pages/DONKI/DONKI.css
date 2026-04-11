@@ -24,11 +24,10 @@ h2 {
     flex: 2; 
     height: 80%;
     padding: 1em;
-  border-radius: 0.3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .donki-rs-wrapper {
@@ -38,8 +37,8 @@ h2 {
     width: 40vw;
     height: 50vh;
     border: 2px solid white;
-   overflow: hidden;
-     animation: slideInWindow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+    animation: slideInWindow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes slideInWindow {
@@ -68,7 +67,6 @@ h2 {
     overflow-y: auto;
     height: 95%;
     margin-top: 2em;
-
 }
 
 .donki-rs-wrapper::before {
@@ -80,7 +78,6 @@ h2 {
     z-index: 0;
 }
 
-
 .donki-title2-container {
     position: absolute;
     display: flex;
@@ -89,12 +86,10 @@ h2 {
     height: 2em;
     border-bottom: 1px solid white;
     background: rgb(230, 218, 218);
-    display: flex;
     align-items: center;
     padding-left: 0.3em;
     z-index: 3;
 }
-
 
 .donki-title2-container h2 {
     font-size: 1.3em;
@@ -114,7 +109,6 @@ h2 {
     margin: 0;
     padding-bottom: 1em;
 }
-
 
 .donki-links-container {
     display: flex;
@@ -152,5 +146,64 @@ h2 {
 .left-side-deco img {
     width: 70%;
     height: 100%;
-    filter: invert(2) brightness(2)   
+    filter: invert(2) brightness(2);
+}
+
+@media (max-width: 768px) {
+
+    .donki-container {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1em;
+        overflow-y: scroll;
+    }
+
+    .donki-left-side {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .donki-right-side {
+        position: absolute;
+        top: 70%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+        margin-top: 1em;
+    }
+
+    .donki-content {
+        background: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .donki-rs-wrapper {
+        min-width: 80vw;
+        height: 50vh;
+    }
+
+    .donki-rs-content {
+        position: relative;
+        height: auto;
+        overflow: visible;
+    }
+
+    .donki-links-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .left-side-deco {
+        position: fixed;
+        bottom: 0;
+    }
 }

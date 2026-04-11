@@ -171,6 +171,9 @@
 }
 
 .xp-window {
+      position: fixed;
+     top: 20%; 
+     left: 30%; 
     width: 500px;
     background: #c0c0c0;
     border: 2px solid var(--color5);
@@ -284,6 +287,21 @@
 
     .title-and-search {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nasa-imgs-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 80%;
+        margin-left: 0;
     }
 
     .title-and-search h2 {
@@ -295,4 +313,11 @@
     text-shadow: 5px 5px 20px black;
     text-wrap: wrap;
 }
+ 
+    .xp-window {
+        top: 30%;
+        left: 10%;
+        
+    }
+
 }

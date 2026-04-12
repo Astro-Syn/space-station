@@ -188,8 +188,20 @@ h2 {
         height: 100vh;
     }
 
+    .donki-text {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donki-text p {
+        font-size: 1.2em;
+    }
+
     .donki-text h2{
-    margin: 1em;
+    margin: 0.3em;
     padding: 0;
     font-size: 4.5em;
     width: 70vw;
@@ -211,7 +223,6 @@ h2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
        min-width: 500px;
        max-width: 700px;
     }
@@ -221,7 +232,6 @@ h2 {
     }
 
     .left-side-deco {
-        position: fixed;
-        bottom: 0;
+        opacity: 0;
     }
 }

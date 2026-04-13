@@ -152,6 +152,8 @@ h2 {
 @media (max-width: 768px) {
 
     .donki-container {
+        display: flex;
+        flex-direction: column;
         margin: 0;
         width: 100%;
         height: 110vh;
@@ -229,9 +231,31 @@ h2 {
 
     .donki-links-container a {
         font-size: 1.5em;
+         transition: all 0.25s ease;
     }
 
     .left-side-deco {
         opacity: 0;
     }
+
+    .back-to-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(23, 255, 112, 0.411);
+        z-index: 55;
+        font-size: 2em;
+        padding: 0.2em;
+        color: white;
+        border: 1px solid white;
+        position: fixed;
+        bottom: 1em;
+    }
+
+    .donki-links-container a.active {
+    color: rgba(255, 255, 255, 0.932);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(134, 255, 134), 0 0 20px rgb(244, 255, 244);
+    padding-left: 0.5em;
+}
 }

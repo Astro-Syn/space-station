@@ -16,22 +16,69 @@ const APOD = () => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchAPOD = async () => {
-            try {
-                const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
-                if (!res.ok) throw new Error('Network response was not ok');
-                const json: APODData = await res.json();
-                setData(json);
-            } catch (err) {
-                setError('Failed to fetch data');
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchAPOD();
-    }, []);
+    const fetchAPOD = async () => {
+        let attempts = 0;
 
-    if (loading) return <p>Loading...</p>;
+        while (attempts < 3) {
+            try {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 5000);
+
+                const res = await fetch(
+                    `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
+                    { signal: controller.signal }
+                );
+
+                clearTimeout(timeout);
+
+                if (!res.ok) throw new Error("Bad response");
+
+                const json: APODData = await res.json();
+
+                
+                if (json.media_type === "video") {
+                    throw new Error("Got video, retrying...");
+                }
+
+                setData(json);
+                return;
+
+            } catch (err) {
+                attempts++;
+                if (attempts >= 3) {
+                    setError("Failed to fetch NASA data");
+                }
+            }
+        }
+
+        setLoading(false);
+    };
+
+    fetchAPOD();
+}, []);
+
+    
+    const [loadingText, setLoadingText] = useState("Looking for photo");
+
+useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+        i = (i + 1) % 4;
+        setLoadingText("Looking for photo" + ".".repeat(i));
+    }, 400);
+
+    return () => clearInterval(interval);
+}, []);
+
+if (loading) {
+    return (
+        <div className="apod-loading">
+            <p>{loadingText}</p>
+        </div>
+    );
+}
+
+
     if (error) return <p>{error}</p>;
     if (!data) return null;
 

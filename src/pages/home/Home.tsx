@@ -94,7 +94,7 @@ const Home = () => {
                          className='barcode-png'
                          src='/Images/barcode.png'/>
                            <div className='credits'>
-                            <p>Github: AstroSyn</p>
+                            <p>Github: Astro-Syn</p>
                            </div>
                          </div>
                         

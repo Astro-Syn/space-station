@@ -135,6 +135,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    
 }
 
 .title-wrapper {
@@ -372,6 +373,43 @@ body {
 
 .hamburger {
     display: none;
+}
+
+@media screen and (max-width: 1536px){
+    body {
+        
+    }
+
+    .home-text-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.title-wrapper {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    padding: 2em;
+    line-height: 1;
+    
+}
+
+
+.home-side-text-wrapper{
+    padding-top: 8em;
+    font-size: 0.6em;
+}
+
+.bottom-chaos {
+    margin-bottom: 1em;
+    
+}
+
+
+
 }
 
 @media (max-width: 900px) {

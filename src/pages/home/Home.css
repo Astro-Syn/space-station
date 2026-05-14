@@ -154,7 +154,7 @@ body {
 
 
 .title-text1 {
-    font-size: clamp(6rem, 12cqi, 19rem);
+    font-size: clamp(5rem, 12cqi, 19rem);
     color: var(--color5);
     animation: riseUp 1s ease-out forwards;
     font-weight: 500;   
@@ -164,7 +164,7 @@ body {
 
 .title-text2 {
     position: relative;
-    font-size: clamp(6rem, 12cqi, 25rem);
+    font-size: clamp(5.5rem, 12cqi, 25rem);
     margin: 0;
     font-weight: 700;
     -webkit-text-stroke: 3px white;
@@ -405,7 +405,22 @@ body {
 
 .bottom-chaos {
     margin-bottom: 1em;
-    
+}
+
+.desc-section {
+    height: 140px;    
+    overflow: hidden;
+    position: relative;
+}
+
+.desc-section p {
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 8s linear;
+}
+
+.bottom-chaos:hover .desc-section p {
+    transform: translateY(-55%);
 }
 
 
@@ -459,7 +474,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        height: 50%;
+        height: 60vh;
         width: 100%;
         background: black;
         border: 1px solid white;
@@ -468,6 +483,7 @@ body {
         align-items: center;
         font-size: 1.5em;
         gap: 2em;
+        padding:2em;
         padding-left: 2em;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
@@ -537,4 +553,66 @@ body {
     .barcode-creds {
         align-self: flex-start;
     }
+}
+
+@media screen and (max-width: 480px){
+ 
+    .links{
+        font-size: 1em;
+    }
+
+    .icon {
+        height: 70%;
+        width: 70%;
+    }
+
+    
+.home-text-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.title-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    margin-bottom: 2em;
+    padding: 2em;
+    line-height: 0.9;
+    
+}
+
+.title-text1 {
+    
+    color: var(--color5);
+    animation: riseUp 1s ease-out forwards;
+    font-weight: 500;   
+    margin: 0;
+    user-select: none;
+}
+
+.title-text2 {
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+    -webkit-text-stroke: 3px white;
+    color: black;
+    user-select: none;
+    z-index: 1;
+}
+
+.desc-banner{
+    display: none;
+}
+.desc-section {
+    display: none;
+}
+
 }

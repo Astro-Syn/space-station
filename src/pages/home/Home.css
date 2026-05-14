@@ -556,7 +556,26 @@ body {
 }
 
 @media screen and (max-width: 480px){
- 
+
+    .home-wrapper {
+        clip-path: polygon(0% 0, 93% 0, 100% 8%, 100% 90%, 100% 100%, 0% 100%, 0% 85%);
+    }
+
+    .home-wrapper::before {
+        clip-path: polygon(
+        0% 0, 93% 0, 100% 8%, 100% 90%,
+        100% 100%, 0% 100%, 0% 85%
+    );
+    }
+
+    .home-wrapper::after{
+         clip-path: polygon(
+        0% 0, 93% 0, 100% 8%, 100% 90%,
+        100% 100%, 0% 100%, 0% 85%
+    );
+    }
+
+
     .links{
         font-size: 1em;
     }

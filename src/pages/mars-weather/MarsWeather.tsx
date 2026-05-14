@@ -91,7 +91,9 @@ const MarsWeather: React.FC = () => {
         </div>
 
         <div className="mars-data">
+          <div className='mars-scroll'>
 
+          
           <div className="data-card">
             <h3>Temperature</h3>
             <p>
@@ -112,6 +114,7 @@ const MarsWeather: React.FC = () => {
           </div>
 
         </div>
+      </div>
       </div>
 
     </div>

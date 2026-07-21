@@ -259,3 +259,39 @@ h2 {
     padding-left: 0.5em;
 }
 }
+
+@media screen and (max-width: 480px){
+
+    .donki-container {
+        
+        height: 100vh;
+    }
+
+ .donki-left-side{
+    margin-top: 1em;
+ }
+
+ .donki-text {
+    
+    width: 80vw;
+    
+ }
+
+ .donki-text h2 {
+    margin: 0;
+    font-size: 2.5em;
+ }
+
+ .donki-text p {
+    font-size: 1em;
+    color: rgb(0, 209, 108);
+    text-align: center;
+    
+ }
+
+ .donki-links-container a{
+    font-size: 1em;
+ }
+
+
+}

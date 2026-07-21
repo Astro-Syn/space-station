@@ -48,7 +48,7 @@ body {
     border-radius: 0.3em;
     background-image: var(--color1);
     overflow: hidden;
-    clip-path: polygon(0% 0, 93% 0, 100% 8%, 100% 90%, 80% 100%, 0% 100%, 0% 85%);
+    clip-path: polygon(0 97%, 0 0, 97% 0, 100% 5%, 100% 95%, 98% 100%, 65% 100%, 63% 98%, 40% 98%, 38% 100%, 1% 100%);
     z-index: 1;
 }
 
@@ -57,10 +57,7 @@ body {
     content: "";
     inset: 0;
     background: var(--color5); 
-    clip-path: polygon(
-        0% 0, 93% 0, 100% 8%, 100% 90%,
-        80% 100%, 0% 100%, 0% 85%
-    );
+   clip-path: polygon(0 97%, 0 0, 97% 0, 100% 5%, 100% 95%, 98% 100%, 65% 100%, 63% 98%, 40% 98%, 38% 100%, 1% 100%);
     z-index: 0;
 }
 
@@ -69,10 +66,7 @@ body {
     position: absolute;
     inset: 4px; 
     background-image: url('/public/Images/star-bg2.png');
-    clip-path: polygon(
-        0% 0, 93% 0, 100% 8%, 100% 90%,
-        80% 100%, 0% 100%, 0% 85%
-    );
+    clip-path: polygon(0 97%, 0 0, 97% 0, 100% 5%, 100% 95%, 98% 100%, 65% 100%, 63% 98%, 40% 98%, 38% 100%, 1% 100%);
     z-index: 1;
 }
 

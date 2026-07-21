@@ -310,6 +310,7 @@
         width: 93vw;
         height: 100vh;
         overflow-y: auto;
+        margin: 0;
     }
 
     .mars-visual{
@@ -317,8 +318,10 @@
     }
 
     .mars-header {
-        height: 35vh;   
-        position: relative;    
+        
+        height: 25vh;   
+        position: relative;
+        margin: 0;    
     }
 
     .mars-header::before {

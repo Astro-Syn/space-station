@@ -150,7 +150,7 @@
     content: "";
     position: absolute;
     inset: 2px;
-    background: rgba(3, 158, 112, 0.281);
+    background: rgba(2, 69, 20, 0.237);
     backdrop-filter: saturate(0.8);
     z-index: 0;
     
@@ -219,7 +219,7 @@
     position: absolute;
     inset: 0;
     content: "";
-    background: rgba(0, 11, 20, 0.959);
+    background: rgba(1, 53, 9, 0.721);
     z-index: 1;
 }
 
@@ -267,12 +267,6 @@
 }
 
 
-@media (max-width: 900px) {
-    .grid {
-       padding-top: 50em;
-        grid-template-columns: 1fr;
-    }
-}
 
 @media (max-width: 1200px) {
     .nasa-imgs-container {
@@ -320,4 +314,134 @@
         
     }
 
+}
+
+@media screen and (max-width: 900px){
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+       padding-top: 40em;
+    }
+
+    .xp-window {
+        top: 20%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nasa-imgs-container {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-top: 6rem;
+        padding: 1rem;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        gap: 2rem;
+    }
+
+    .title-and-search {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nasa-imgs-title {
+        height: auto;
+        padding: 1.5rem 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .title-and-search h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin: 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: .8rem;
+    }
+
+    .grid {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        max-height: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .card {
+        max-height: none;
+        aspect-ratio: 1;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .xp-window {
+        width: 95%;
+        max-width: 420px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .xp-title-bar {
+        font-size: 1rem;
+    }
+
+    .xp-content p {
+        font-size: .95rem;
+        padding: 1rem;
+    }
+
+    .loading-txt {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .nasa-imgs-container {
+        margin-top: 1rem;
+        padding: .75rem;
+    }
+
+    .title-and-search h2 {
+        font-size: 1.6rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .xp-window {
+        width: calc(100% - 20px);
+    }
 }
